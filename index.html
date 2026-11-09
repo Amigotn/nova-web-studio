@@ -1,180 +1,344 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nova Web Studio creates modern websites and digital solutions.">
 
-    <title>Nova Web Studio</title>
+<title>Nova Web Studio | Digital Solutions</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 8%;
-            background: #172338;
-        }
+body {
+  font-family: Arial, sans-serif;
+  background: #0c1424;
+  color: white;
+  line-height: 1.6;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #45d9f5;
-        }
+header {
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121f34;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #45d9f5;
+}
 
-        .hero {
-            text-align: center;
-            padding: 110px 20px;
-        }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+nav a:hover {
+  color: #45d9f5;
+}
 
-        .hero span {
-            color: #45d9f5;
-        }
+.hero {
+  text-align: center;
+  padding: 115px 20px;
+  background: linear-gradient(135deg, #101d33, #172e4a);
+}
 
-        .hero p {
-            color: #c5d0df;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+.tag {
+  color: #45d9f5;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
-            background: #45d9f5;
-            color: #101827;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  margin: 20px auto;
+  max-width: 850px;
+  line-height: 1.15;
+}
 
-        .services {
-            padding: 60px 8%;
-            background: #172338;
-            text-align: center;
-        }
+.hero h1 span {
+  color: #45d9f5;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 35px;
-        }
+.hero p {
+  color: #bdc9d9;
+  max-width: 620px;
+  margin: 0 auto;
+}
 
-        .card {
-            padding: 30px;
-            background: #24334c;
-            border-radius: 12px;
-        }
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: #45d9f5;
+  color: #0c1424;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        .card h3 {
-            color: #45d9f5;
-            margin-bottom: 15px;
-        }
+.button:hover {
+  background: white;
+}
 
-        footer {
-            padding: 25px;
-            text-align: center;
-            color: #aab7c9;
-        }
+section:not(.hero) {
+  padding: 75px 8%;
+}
 
-        @media(max-width: 600px) {
-            .hero h1 {
-                font-size: 34px;
-            }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #aab8cb;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #182840;
+  border: 1px solid #293e59;
+  border-radius: 12px;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #45d9f5;
+}
+
+.card h3 {
+  color: #45d9f5;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #bdc9d9;
+}
+
+.portfolio {
+  background: #121f34;
+}
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  max-width: 750px;
+  margin: auto;
+  color: #bdc9d9;
+}
+
+.contact {
+  text-align: center;
+  background: #121f34;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #aab8cb;
+}
+
+@media(max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  .hero {
+    padding: 85px 20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">NOVA WEB STUDIO</div>
+<header>
+  <div class="logo">NOVA WEB STUDIO</div>
 
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section class="hero">
-        <h1>We Build <span>Digital Experiences</span></h1>
+<main>
 
-        <p>
-            Creative websites and smart digital solutions
-            designed to help your ideas grow.
-        </p>
+<section class="hero" id="home">
+  <div class="tag">CREATIVITY MEETS TECHNOLOGY</div>
 
-        <a href="#services" class="button">
-            Explore Our Services
-        </a>
-    </section>
+  <h1>
+    We Build <span>Digital Experiences</span>
+    That Matter.
+  </h1>
 
-    <section class="services" id="services">
-        <h2>Our Services</h2>
+  <p>
+    We create modern websites and practical digital
+    solutions that help businesses bring their ideas
+    to life.
+  </p>
 
-        <div class="cards">
+  <a href="#contact" class="button">
+    Start a Project
+  </a>
+</section>
 
-            <div class="card">
-                <h3>Website Design</h3>
-                <p>Beautiful and modern websites.</p>
-            </div>
+<section id="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Digital solutions for modern businesses.</p>
+  </div>
 
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Responsive websites for all devices.</p>
-            </div>
+  <div class="cards">
 
-            <div class="card">
-                <h3>Digital Solutions</h3>
-                <p>Useful online tools and services.</p>
-            </div>
+    <div class="card">
+      <h3>Website Design</h3>
+      <p>
+        Attractive, modern and user-friendly
+        website designs.
+      </p>
+    </div>
 
-        </div>
-    </section>
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>
+        Responsive websites built for computers,
+        tablets and phones.
+      </p>
+    </div>
 
-    <section class="hero" id="about">
-        <h2>Ideas into Reality</h2>
-        <p>We combine creativity, technology and AI assistance.</p>
-    </section>
+    <div class="card">
+      <h3>Online Services</h3>
+      <p>
+        Useful digital tools and online
+        applications.
+      </p>
+    </div>
 
-    <section class="hero" id="contact">
-        <h2>Let's Work Together</h2>
-        <p>Contact information coming soon.</p>
-    </section>
+    <div class="card">
+      <h3>Website Maintenance</h3>
+      <p>
+        Website improvements, updates and
+        technical support.
+      </p>
+    </div>
 
-    <footer>
-        © 2026 Nova Web Studio
-    </footer>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="section-title">
+    <h2>Our Portfolio</h2>
+    <p>Some demonstration projects we are developing.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>School Website</h3>
+      <p>
+        A demonstration website for a modern
+        educational institution.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Restaurant Website</h3>
+      <p>
+        A restaurant website concept with
+        a digital menu.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>
+        A professional online presence
+        for a small business.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-title">
+    <h2>About Nova Web Studio</h2>
+  </div>
+
+  <p>
+    Nova Web Studio is a growing digital development
+    initiative focused on creating accessible,
+    practical and modern web experiences.
+    We combine creativity, technology and
+    AI-assisted development.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Have a Project in Mind?</h2>
+    <p>Let's turn your idea into a digital experience.</p>
+  </div>
+
+  <a href="mailto:ahmedcherni2009@gmail.com"
+     class="button">
+    Contact Us
+  </a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Nova Web Studio. All rights reserved.
+</footer>
 
 </body>
 </html>
