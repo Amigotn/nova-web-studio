@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Web Studio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: #172338;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #45d9f5;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 110px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #45d9f5;
+        }
+
+        .hero p {
+            color: #c5d0df;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #45d9f5;
+            color: #101827;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .services {
+            padding: 60px 8%;
+            background: #172338;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .card {
+            padding: 30px;
+            background: #24334c;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            color: #45d9f5;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            color: #aab7c9;
+        }
+
+        @media(max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">NOVA WEB STUDIO</div>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>We Build <span>Digital Experiences</span></h1>
+
+        <p>
+            Creative websites and smart digital solutions
+            designed to help your ideas grow.
+        </p>
+
+        <a href="#services" class="button">
+            Explore Our Services
+        </a>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Website Design</h3>
+                <p>Beautiful and modern websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Responsive websites for all devices.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Solutions</h3>
+                <p>Useful online tools and services.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="hero" id="about">
+        <h2>Ideas into Reality</h2>
+        <p>We combine creativity, technology and AI assistance.</p>
+    </section>
+
+    <section class="hero" id="contact">
+        <h2>Let's Work Together</h2>
+        <p>Contact information coming soon.</p>
+    </section>
+
+    <footer>
+        © 2026 Nova Web Studio
+    </footer>
+
+</body>
+</html>
